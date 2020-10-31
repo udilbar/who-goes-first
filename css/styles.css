@@ -22,3 +22,8 @@ img {
 h1 {
   font-weight: bold;
 }
+
+.card-img-top {
+  width: 253px;
+  height: 150px;
+}
