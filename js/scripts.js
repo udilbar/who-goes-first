@@ -17,6 +17,26 @@ var minuteByCar = document.querySelector('.minutes-span-by-car');
 var hourByPlane = document.querySelector('.hours-span-by-plane');
 var minuteByPlane = document.querySelector('.minutes-span-by-plane');
 
+// Reset inputs' values by equaling to zero function
+var resetValue = function (hourInput, minuteInput) {
+  hourInput.textContent = 0;
+  minuteInput.textContent = 0;
+}
+
+// Hour minute calculator function
+var calculateHourMinute = function (velocity, hourInput, minuteInput) {
+  var distanceInKilometres = parseFloat(distanceInput.value.trim(), 10);
+
+  var time = (distanceInKilometres / velocity).toFixed(2);
+
+  var rest = Math.round((time - Math.floor(time)) * MINUTE);
+
+  time = Math.floor(time);
+
+  hourInput.textContent = time;
+  minuteInput.textContent = rest;
+}
+
 // Who goes firstly?
 distanceForm.addEventListener('submit', function (evt) {
   evt.preventDefault();
@@ -27,6 +47,7 @@ distanceForm.addEventListener('submit', function (evt) {
       calculateHourMinute(VELOCITY_BY_BICYCLE, hourByBicycle, minuteByBicycle);
       calculateHourMinute(VELOCITY_BY_CAR, hourByCar, minuteByCar);
       calculateHourMinute(VELOCITY_BY_PLANE, hourByPlane, minuteByPlane);
+      distanceInput.value = distanceInput.value.trim();
     }
     else {
       alert('Iltimos, noldan katta musbat son kiriting )');
@@ -44,22 +65,6 @@ distanceForm.addEventListener('submit', function (evt) {
     resetValue(hourByPlane, minuteByPlane);
     distanceInput.value = '';
   }
+
+  distanceInput.focus();
 });
-
-// Hour minute calculator
-var calculateHourMinute = function (velocity, hourInput, minuteInput) {
-  var distanceInKilometres = parseFloat(distanceInput.value.trim(), 10);
-
-  var time = (distanceInKilometres / velocity).toFixed(2);
-
-  var rest = Math.round((time - Math.floor(time)) * MINUTE);
-
-  hourInput.textContent = Math.floor(time);
-  minuteInput.textContent = rest;
-}
-
-// Reset inputs' values by equaling to zero
-var resetValue = function (hourInput, minuteInput) {
-  hourInput.textContent = 0;
-  minuteInput.textContent = 0;
-}
