@@ -1,4 +1,5 @@
 .section{
+  background-color: rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
   width: 100%;
@@ -7,6 +8,7 @@
 
 .circles{
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;

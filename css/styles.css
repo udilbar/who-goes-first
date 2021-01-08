@@ -23,9 +23,18 @@ h1 {
   font-weight: bold;
 }
 
+.card {
+  border-radius: 20px;
+  box-shadow: 13px 13px 10px rgba(0, 0, 0, 0.3);
+}
+
 .card-img-top {
   width: 253px;
   height: 150px;
+}
+
+.distance-button {
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 450px) {
