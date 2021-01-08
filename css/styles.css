@@ -23,6 +23,10 @@ h1 {
   font-weight: bold;
 }
 
+.section {
+  padding-bottom: 83px!important;
+}
+
 .card {
   border-radius: 20px;
   box-shadow: 13px 13px 10px rgba(0, 0, 0, 0.3);
