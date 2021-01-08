@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Who goes first?</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <section class="py-5">
+  <section class="section py-5">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
     <div class="container">
       <h1 class="distance-heading text-center mb-5">Kim birinchi bo-rish-ga!</h1>
-      <form class="distance-form d-flex align-items-center justify-content-center mb-5" action="https://echo.htmlacademy.ru" method="POST">
+      <form class="distance-form d-flex align-items-center justify-content-center mb-5"
+        action="https://echo.htmlacademy.ru" method="POST">
         <div class="d-flex align-items-center">
           <label class="mr-4 text-nowrap" for="distance">Masofa (km)</label>
-          <input class="distance-input form-control mr-4" id="distance" type="number" name="distance" step="any" min="1" autocomplete="off" required>
+          <input class="distance-input form-control mr-4" id="distance" type="number" name="distance" step="any" min="1"
+            autocomplete="off" required>
         </div>
         <button class="distance-button btn btn-outline-info" type="submit">Hisoblash</button>
       </form>
@@ -23,7 +40,8 @@
       <div class="row">
         <div class="col-sm-6 col-lg-3 d-flex flex-column flex-grow-1 mb-3">
           <div class="card flex-row flex-sm-column align-items-center text-center flex-grow-1 py-3">
-            <img class="card-img-top d-block align-self-center" src="img/person.svg" width="253" height="150" alt="rasm">
+            <img class="card-img-top d-block align-self-center" src="img/person.svg" width="253" height="150"
+              alt="rasm">
             <div class="card-body distance-body">
               <h3 class="card-title">Piyoda</h3>
               <div class="card-text">
@@ -80,4 +98,5 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
+
 </html>
